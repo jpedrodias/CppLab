@@ -1,21 +1,28 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-    "name": "C/C++ Lab",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "remote.downloadExtensionsLocally": true,
-                "telemetry.enableTelemetry": false,
-                "extensions.ignoreRecommendations": false,
-                "workbench.remoteIndicator.showExtensionRecommendations": false
-            },
-            "extensions": [
-                "ms-vscode.cpptools",
-                "kunalg.library-documentation-cpp",
-                "danielpinto8zz6.c-cpp-compile-run"
-            ]
-        }
-    }
+	"name": "C/C++ Lab",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	"features": {
+		"ghcr.io/jungaretti/features/make:1": {},
+		"ghcr.io/devcontainers-extra/features/cmake:1": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "gcc -v"
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
