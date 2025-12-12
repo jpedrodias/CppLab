@@ -4,15 +4,7 @@
         {
             "label": "build_c",
             "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-Wall",
-                "-Wextra",
-                "-g",
-                "${workspaceFolder}/src/hello.c",
-                "-o",
-                "${workspaceFolder}/build/hello_c"
-            ],
+            "command": "mkdir -p ${workspaceFolder}/build && gcc -Wall -Wextra -g ${workspaceFolder}/src/hello.c -o ${workspaceFolder}/build/hello_c",
             "group": "build",
             "problemMatcher": ["$gcc"],
             "detail": "Build C program with GCC"
@@ -20,16 +12,7 @@
         {
             "label": "build_cpp",
             "type": "shell",
-            "command": "g++",
-            "args": [
-                "-Wall",
-                "-Wextra",
-                "-g",
-                "-std=c++17",
-                "${workspaceFolder}/src/hello.cpp",
-                "-o",
-                "${workspaceFolder}/build/hello_cpp"
-            ],
+            "command": "mkdir -p ${workspaceFolder}/build && g++ -Wall -Wextra -g -std=c++17 ${workspaceFolder}/src/hello.cpp -o ${workspaceFolder}/build/hello_cpp",
             "group": "build",
             "problemMatcher": ["$gcc"],
             "detail": "Build C++ program with G++"
