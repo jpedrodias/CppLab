@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build_c",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g",
+                "${workspaceFolder}/src/hello.c",
+                "-o",
+                "${workspaceFolder}/build/hello_c"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build C program with GCC"
+        },
+        {
+            "label": "build_cpp",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g",
+                "-std=c++17",
+                "${workspaceFolder}/src/hello.cpp",
+                "-o",
+                "${workspaceFolder}/build/hello_cpp"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build C++ program with G++"
+        },
+        {
+            "label": "build_all_make",
+            "type": "shell",
+            "command": "make",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build all programs using Makefile"
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Clean build artifacts"
+        }
+    ]
+}
