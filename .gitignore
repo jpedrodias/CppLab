@@ -1,5 +1,13 @@
-# Private
+# Private Files and Folders
 .private/
+.venv/
+.cloud/
+.claude/
+CLAUDE.md
+
+# Conversion scripts (temporary utilities)
+convert_docx.py
+
 
 # Prerequisites
 *.d
