@@ -121,7 +121,11 @@ Note: Git is now available in both Windows (PowerShell/CMD) and WSL (Debian). Wh
 
 # 4) Install Docker (Docker Desktop) on Windows 11
 Recommended for this course: Docker Desktop with the WSL 2 backend.
-Download/install (official site): Official guide "Install Docker Desktop on Windows"Guia oficial "Install Docker Desktop on Windows" (follow the requirements and the recommended installer).
+
+Download from the official site: [https://www.docker.com/](https://www.docker.com/products/docker-desktop/)
+
+Follow the official guide "Install Docker Desktop on Windows" [(follow the requirements and the recommended installer)](https://docs.docker.com/desktop/install/windows-install/).
+
 After installing, open Docker Desktop and confirm the following options:
 - Settings → General → "Use the WSL 2 based engine" (enabled).
 - Settings → Resources → WSL Integration → enable integration for "Debian" (or the distro you are using).
