@@ -211,3 +211,30 @@ Solution: restart PowerShell or your terminal. Git for Windows adds itself to PA
 | VS Marketplace — Python | VS Marketplace — C/C++ |
 | VS Marketplace — GitLens | VS Marketplace — GitHub Pull Requests |
 | WinGet — Microsoft.VisualStudioCode |  |
+
+---
+---
+
+# Full Docker *cache* cleanup
+
+Although Docker does not have as large a footprint as a traditional virtual machine, it is still a form of virtualization that can consume considerable disk space. In addition to downloaded images, Docker creates volumes, networks, and other artifacts that can accumulate.
+
+Docker Desktop does not always show all resources in use. For better management, you can add an extension called [Portainer](https://www.portainer.io/) in Docker Desktop Extensions.
+
+Or alternatively, you can perform a full *cache* cleanup using:
+
+```bash
+docker compose down
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -q) -f
+docker volume rm $(docker volume ls -q)
+docker network prune -f
+docker builder prune --all -f
+docker system prune -a --volumes -f
+```
+
+> ℹ️ **Note:** Docker *volumes* store persistent data, such as database data.  
+> ⚠️ **Warning:** Use these commands with caution, as they may delete important data that cannot be recovered.
+
+---
