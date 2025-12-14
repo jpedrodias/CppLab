@@ -159,8 +159,7 @@ After opening VS Code at least once, you can install extensions via the terminal
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
-code --install-extension eamodio.gitlens
-code --install-extension github.vscode-pull-request-github
+code --install-extension github.remotehub
 ```
 
 Extensions included in this guide:
@@ -168,7 +167,7 @@ Extensions included in this guide:
 - Python (ms-python.python)
 - C/C++ (ms-vscode.cpptools)
 - GitLens (eamodio.gitlens) — Git integration with advanced features like blame, history, and more
-- GitHub Pull Requests and Issues (github.vscode-pull-request-github) — Work with GitHub repositories, pull requests, and issues directly in VS Code
+- GitHub Repositories (github.remotehub) — Work with GitHub repositories without cloning them to your local machine
 
 ## 5.3 (Optional) Additional recommended extensions
 WSL extension to open Linux folders in VS Code:
