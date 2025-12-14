@@ -149,6 +149,8 @@ In PowerShell (no admin needed if installing per user), run:
 winget install --id=Microsoft.VisualStudioCode -e
 ```
 
+Alternatively, download from the official site: [https://code.visualstudio.com/](https://code.visualstudio.com/Download)
+
 If the winget command does not exist, update "App Installer" via the Microsoft Store/Windows Update.
 
 ## 5.2 Install essential extensions (command line)
@@ -158,6 +160,7 @@ code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
 code --install-extension eamodio.gitlens
+code --install-extension github.vscode-pull-request-github
 ```
 
 Extensions included in this guide:
@@ -165,6 +168,7 @@ Extensions included in this guide:
 - Python (ms-python.python)
 - C/C++ (ms-vscode.cpptools)
 - GitLens (eamodio.gitlens) — Git integration with advanced features like blame, history, and more
+- GitHub Pull Requests and Issues (github.vscode-pull-request-github) — Work with GitHub repositories, pull requests, and issues directly in VS Code
 
 ## 5.3 (Optional) Additional recommended extensions
 WSL extension to open Linux folders in VS Code:
@@ -206,4 +210,5 @@ Solution: restart PowerShell or your terminal. Git for Windows adds itself to PA
 | Docker Docs — Docker Desktop WSL 2 backend | Docker — Docker Personal (licensing) |
 | Docker Docs — Desktop license | VS Marketplace — Dev Containers |
 | VS Marketplace — Python | VS Marketplace — C/C++ |
-| VS Marketplace — GitLens | WinGet — Microsoft.VisualStudioCode |
+| VS Marketplace — GitLens | VS Marketplace — GitHub Pull Requests |
+| WinGet — Microsoft.VisualStudioCode |  |
